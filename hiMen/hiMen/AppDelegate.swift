@@ -16,17 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
-        //开启日志收集总开关
-        IFlyFlowerCollector.setCollectorStatus(true)
-        IFlyFlowerCollector.setDebugMode(true)
-        IFlyFlowerCollector.setCaptureUncaughtException(true)
-        //开启卡顿信息收集
-        IFlyFlowerCollector.setBlockMonitorStatus(true)
-        IFlyFlowerCollector.setBlockMonitorTimeInterval(5)
-        IFlyFlowerCollector.setAppid("58cbba9d")
-        IFlyFlowerCollector.setAutoLocation(true)
-        IFlyFlowerCollector.setDuid("testDuid")
         
+        //用户统计
+
+        
+        for _ in 0...10{
+            let help = SpeechHelper.shared
+            print("\(help)")
+        }
+        
+        
+        TrackingHelper.trackSetting(Appid: "58cbba9d", CollectorStatus: true, DebugMode: true, CaptureUncaughtException: true, MonitorStatus: true, MonitorTimeInterval: 5, AutoLocation: true, Duid: "testDuid")
         
         
         return true

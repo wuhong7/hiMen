@@ -19,6 +19,8 @@
 		E6F270321E7D93CB00127FD7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F270311E7D93CB00127FD7 /* UIKit.framework */; };
 		E6F270341E7D93DB00127FD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F270331E7D93DB00127FD7 /* Foundation.framework */; };
 		E6F270361E7D93ED00127FD7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F270351E7D93ED00127FD7 /* CoreGraphics.framework */; };
+		E6F8A8D31E7EB5B600FA15E6 /* TrackingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F8A8D21E7EB5B600FA15E6 /* TrackingHelper.swift */; };
+		E6F8A8D51E7EB82000FA15E6 /* SpeechHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F8A8D41E7EB82000FA15E6 /* SpeechHelper.swift */; };
 		E6FE17C31E7BF359006705EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FE17C21E7BF359006705EE /* AppDelegate.swift */; };
 		E6FE17C51E7BF359006705EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FE17C41E7BF359006705EE /* ViewController.swift */; };
 		E6FE17C81E7BF359006705EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6FE17C61E7BF359006705EE /* Main.storyboard */; };
@@ -41,6 +43,8 @@
 		E6F270311E7D93CB00127FD7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E6F270331E7D93DB00127FD7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E6F270351E7D93ED00127FD7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E6F8A8D21E7EB5B600FA15E6 /* TrackingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingHelper.swift; sourceTree = "<group>"; };
+		E6F8A8D41E7EB82000FA15E6 /* SpeechHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechHelper.swift; sourceTree = "<group>"; };
 		E6FE17BF1E7BF359006705EE /* hiMen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hiMen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6FE17C21E7BF359006705EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6FE17C41E7BF359006705EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +87,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E6F8A8CD1E7EB50500FA15E6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E6F8A8CE1E7EB50500FA15E6 /* Controller */,
+				E6F8A8CF1E7EB50500FA15E6 /* Model */,
+				E6F8A8D01E7EB50500FA15E6 /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E6F8A8CE1E7EB50500FA15E6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E6F8A8CF1E7EB50500FA15E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E6F8A8D01E7EB50500FA15E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E6F8A8D11E7EB51400FA15E6 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				E6F8A8D21E7EB5B600FA15E6 /* TrackingHelper.swift */,
+				E6F8A8D41E7EB82000FA15E6 /* SpeechHelper.swift */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
 		E6FE17B61E7BF359006705EE = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +147,8 @@
 		E6FE17C11E7BF359006705EE /* hiMen */ = {
 			isa = PBXGroup;
 			children = (
+				E6F8A8D11E7EB51400FA15E6 /* tools */,
+				E6F8A8CD1E7EB50500FA15E6 /* Classes */,
 				E6FE17D71E7BF5CB006705EE /* lib */,
 				E6FE17C21E7BF359006705EE /* AppDelegate.swift */,
 				E6FE17C41E7BF359006705EE /* ViewController.swift */,
@@ -222,6 +268,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6FE17C51E7BF359006705EE /* ViewController.swift in Sources */,
+				E6F8A8D51E7EB82000FA15E6 /* SpeechHelper.swift in Sources */,
+				E6F8A8D31E7EB5B600FA15E6 /* TrackingHelper.swift in Sources */,
 				E6FE17C31E7BF359006705EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
