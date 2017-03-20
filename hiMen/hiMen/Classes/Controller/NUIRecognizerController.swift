@@ -15,6 +15,9 @@ class NUIRecognizerController: UIViewController {
     
     var textView : UITextView?
     
+    var currenString : NSString?
+    
+    
     //语音识别器
     var iFlySpeechRecognizer : IFlySpeechRecognizer?
 
@@ -78,7 +81,7 @@ extension NUIRecognizerController{
         //保存录音文件，保存在sdk工作路径中，如未设置工作路径，则默认保存在library/cache下
         iFlySpeechRecognizer?.setParameter("asr.pcm", forKey: IFlySpeechConstant.asr_AUDIO_PATH())
         
-        let _ = iFlySpeechRecognizer?.startListening()
+        iFlySpeechRecognizer?.startListening()
   
         
     }
@@ -150,7 +153,21 @@ extension NUIRecognizerController:IFlySpeechRecognizerDelegate{
      ****/
     func onError(_ errorCode: IFlySpeechError!) {
         
-        print("\(errorCode.errorDesc)")
+        var text : String?
+        if errorCode.errorCode == 0 {
+            if (currenString == nil) {
+                text = "无识别结果";
+            }else {
+                text = "识别成功";
+                //清空识别结果
+                currenString = nil;
+            }
+        }else {
+            text = NSString.localizedStringWithFormat("发生错误：%d %@", errorCode.errorCode,errorCode.errorDesc) as String
+        }
+        
+        
+        print("\(text!)")
         
     }
     
@@ -161,6 +178,11 @@ extension NUIRecognizerController:IFlySpeechRecognizerDelegate{
      ****/
     func onResults(_ results: [Any]!, isLast: Bool) {
         let resultString = NSMutableString()
+        
+        guard results != nil else {
+            return
+        }
+        
         let dict = results[0] as? NSDictionary;
         
         dict?.enumerateKeysAndObjects({ (key, obj, nil) in
@@ -168,14 +190,49 @@ extension NUIRecognizerController:IFlySpeechRecognizerDelegate{
            resultString.appendFormat("%@", key as! CVarArg)
             
         })
-        let resultFromJson = ISRDataHelper.string(fromJson: resultString as String!)
+        
+        let resultFromJson = self.stringFromJson(params: resultString as String!)
         
         textView?.text = (textView?.text)!+resultFromJson!
-
-        print("\(resultFromJson)")
+        currenString = textView?.text as NSString?
+        
+        if isLast {
+             print("\(resultFromJson!)")
+        }
+       
+    }
+    
+    
+    
+    
+    func stringFromJson(params:String?)->String?{
+        
+        if params == nil {
+            return nil
+        }
+        
+        var tempStr = String()
+        let resultDic = try! JSONSerialization.jsonObject(with:(params?.data(using: .utf8))! , options: .allowFragments) as? [String: Any]
+        
+        if resultDic != nil {
+            let wordArray = resultDic?["ws"] as? [Any]
+            
+            for (_, obj) in (wordArray?.enumerated())! {
+                
+                let wsDic = obj as? [String: Any]
+                let cwArray = wsDic?["cw"] as? [Any]
+                
+                for(_, obj) in (cwArray?.enumerated())!{
+                    
+                    let wDic = obj as? [String: Any]
+                    let str = wDic?["w"] as? String
+                    tempStr = tempStr+str!
+                }
+            }
+        }
+        return tempStr
     }
     
 }
-
 
 
