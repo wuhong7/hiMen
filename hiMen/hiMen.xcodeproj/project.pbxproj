@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E6470EC91E7F6A8A00F14B26 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F2701E1E7D8CA700127FD7 /* libc++.tbd */; };
-		E6470ECB1E7F783A00F14B26 /* RecognizerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6470ECA1E7F783A00F14B26 /* RecognizerController.swift */; };
-		E6470ECF1E7F86E400F14B26 /* NUIRecognizerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6470ECE1E7F86E400F14B26 /* NUIRecognizerController.swift */; };
-		E6470ED31E7F88DE00F14B26 /* IATConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E6470ED21E7F88DE00F14B26 /* IATConfig.m */; };
 		E6470EDA1E7FD42800F14B26 /* demoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6470ED91E7FD42800F14B26 /* demoController.swift */; };
 		E6F270181E7D74A200127FD7 /* libSunFlower.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6FE17D91E7BF5CB006705EE /* libSunFlower.a */; };
 		E6F270191E7D75A700127FD7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6FE17E31E7BF655006705EE /* SystemConfiguration.framework */; };
@@ -34,10 +31,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E6470ECA1E7F783A00F14B26 /* RecognizerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognizerController.swift; sourceTree = "<group>"; };
-		E6470ECE1E7F86E400F14B26 /* NUIRecognizerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIRecognizerController.swift; sourceTree = "<group>"; };
-		E6470ED11E7F88DE00F14B26 /* IATConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IATConfig.h; sourceTree = "<group>"; };
-		E6470ED21E7F88DE00F14B26 /* IATConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IATConfig.m; sourceTree = "<group>"; };
 		E6470ED91E7FD42800F14B26 /* demoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = demoController.swift; sourceTree = "<group>"; };
 		E6F2701A1E7D75C100127FD7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		E6F2701C1E7D8C6800127FD7 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iflyMSC.framework; path = "../../iOS_voice_1154_58cbba9d (1)/lib/iflyMSC.framework"; sourceTree = "<group>"; };
@@ -94,19 +87,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E6470ED01E7F88C300F14B26 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				E6470ED11E7F88DE00F14B26 /* IATConfig.h */,
-				E6470ED21E7F88DE00F14B26 /* IATConfig.m */,
-			);
-			path = Other;
-			sourceTree = "<group>";
-		};
 		E6F8A8CD1E7EB50500FA15E6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E6470ED01E7F88C300F14B26 /* Other */,
 				E6F8A8CE1E7EB50500FA15E6 /* Controller */,
 				E6F8A8CF1E7EB50500FA15E6 /* Model */,
 				E6F8A8D01E7EB50500FA15E6 /* View */,
@@ -117,8 +100,6 @@
 		E6F8A8CE1E7EB50500FA15E6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E6470ECA1E7F783A00F14B26 /* RecognizerController.swift */,
-				E6470ECE1E7F86E400F14B26 /* NUIRecognizerController.swift */,
 				E6470ED91E7FD42800F14B26 /* demoController.swift */,
 			);
 			path = Controller;
@@ -284,12 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6470ED31E7F88DE00F14B26 /* IATConfig.m in Sources */,
 				E6F8A8D51E7EB82000FA15E6 /* SpeechHelper.swift in Sources */,
 				E6F8A8D31E7EB5B600FA15E6 /* TrackingHelper.swift in Sources */,
 				E6470EDA1E7FD42800F14B26 /* demoController.swift in Sources */,
-				E6470ECB1E7F783A00F14B26 /* RecognizerController.swift in Sources */,
-				E6470ECF1E7F86E400F14B26 /* NUIRecognizerController.swift in Sources */,
 				E6FE17C31E7BF359006705EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

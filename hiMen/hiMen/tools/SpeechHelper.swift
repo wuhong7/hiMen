@@ -8,6 +8,7 @@
 
 import UIKit
 
+// MARK: - 语音转写初始化
 class SpeechHelper: NSObject {
     //单例
     static let shared = SpeechHelper()
@@ -88,33 +89,33 @@ extension SpeechHelper:IFlySpeechRecognizerDelegate{
         iFlySpeechRecognizer?.delegate = self
         
         if iFlySpeechRecognizer != nil {
-            let instance = IATConfig.sharedInstance()
+            let instance = IATConfig.sharedInstance
             //设置最长录音时间
-            iFlySpeechRecognizer?.setParameter(instance?.speechTimeout, forKey: IFlySpeechConstant.speech_TIMEOUT())
+            iFlySpeechRecognizer?.setParameter(instance.speechTimeout, forKey: IFlySpeechConstant.speech_TIMEOUT())
             
             //设置后端点
-            iFlySpeechRecognizer?.setParameter(instance?.vadEos, forKey: IFlySpeechConstant.vad_EOS())
+            iFlySpeechRecognizer?.setParameter(instance.vadEos, forKey: IFlySpeechConstant.vad_EOS())
             //设置前端点
-            iFlySpeechRecognizer?.setParameter(instance?.vadBos, forKey: IFlySpeechConstant.vad_BOS())
+            iFlySpeechRecognizer?.setParameter(instance.vadBos, forKey: IFlySpeechConstant.vad_BOS())
             //网络等待时间
             iFlySpeechRecognizer?.setParameter("8000", forKey: IFlySpeechConstant.net_TIMEOUT())
             //设置采样率，推荐使用16K
-            iFlySpeechRecognizer?.setParameter(instance?.sampleRate, forKey: IFlySpeechConstant.sample_RATE())
+            iFlySpeechRecognizer?.setParameter(instance.sampleRate, forKey: IFlySpeechConstant.sample_RATE())
             
             
-            if instance?.language == IATConfig.chinese()  {
+            if instance.language == IATConfig.chinese()  {
                 //设置语言
-                iFlySpeechRecognizer?.setParameter(instance?.language, forKey: IFlySpeechConstant.language())
+                iFlySpeechRecognizer?.setParameter(instance.language, forKey: IFlySpeechConstant.language())
                 //设置方言
-                iFlySpeechRecognizer?.setParameter(instance?.accent, forKey: IFlySpeechConstant.accent())
+                iFlySpeechRecognizer?.setParameter(instance.accent, forKey: IFlySpeechConstant.accent())
             }
-            else if instance?.language == IATConfig.english(){
+            else if instance.language == IATConfig.english(){
                 
-                iFlySpeechRecognizer?.setParameter(instance?.language, forKey: IFlySpeechConstant.language())
+                iFlySpeechRecognizer?.setParameter(instance.language, forKey: IFlySpeechConstant.language())
                 
             }
             //设置是否返回标点符号
-            iFlySpeechRecognizer?.setParameter(instance?.dot, forKey: IFlySpeechConstant.asr_PTT())
+            iFlySpeechRecognizer?.setParameter(instance.dot, forKey: IFlySpeechConstant.asr_PTT())
             
         }
         
@@ -222,3 +223,119 @@ extension SpeechHelper:IFlySpeechRecognizerDelegate{
     }
     
 }
+
+// MARK: - 配置选项
+let PUTONGHUA  = "mandarin"
+let YUEYU      = "cantonese"
+let ENGLISH    = "en_us"
+let CHINESE    = "zh_cn"
+let SICHUANESE = "lmz"
+
+class IATConfig: NSObject{
+    
+    //单例
+    static let sharedInstance = IATConfig()
+    private override init() {
+        super.init()
+        defaultSetting()
+    }
+    
+    
+    /**
+     以下参数，需要通过
+     iFlySpeechRecgonizer
+     进行设置
+     ****/
+    var speechTimeout : String?
+    var vadEos : String?
+    var vadBos : String?
+    
+    var language: String?
+    var accent : String?
+    
+    var dot : String?
+    var sampleRate : String?
+    
+    
+    
+    fileprivate func defaultSetting(){
+        speechTimeout = "30000"
+        vadEos = "3000"
+        vadBos = "3000"
+        dot = "1"
+        sampleRate = "16000"
+        language = CHINESE
+        accent = PUTONGHUA
+    }
+
+}
+
+
+extension IATConfig{
+    
+    fileprivate class func mandarin() -> String{
+        
+        return PUTONGHUA
+        
+    }
+    
+    fileprivate class func cantonese() -> String{
+        
+        return YUEYU
+        
+    }
+    
+    
+    fileprivate class func chinese() -> String{
+        
+        return CHINESE
+        
+    }
+    
+    fileprivate class func english() -> String{
+        
+        return ENGLISH
+        
+    }
+    
+    fileprivate class func sichuanese() -> String{
+        
+        return SICHUANESE
+        
+    }
+    
+    
+    fileprivate class func lowSampleRate() -> String{
+        
+        return "8000"
+        
+    }
+    
+    
+    fileprivate class func highSampleRate() -> String{
+        
+        return "16000"
+        
+    }
+    
+    
+    fileprivate class func isDot() -> String{
+        
+        return "1"
+        
+    }
+    
+    fileprivate class func noDot() -> String{
+        
+        return "0"
+        
+    }
+    
+
+}
+
+
+
+
+
+
