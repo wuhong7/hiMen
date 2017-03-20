@@ -52,12 +52,7 @@ class SpeechHelper: NSObject {
         }
         iFlySpeechRecognizer?.cancel()
         
-        //设置音频来源为麦克风
-        iFlySpeechRecognizer?.setParameter(IFLY_AUDIO_SOURCE_MIC, forKey: "audio_source")
-        //设置听写结果格式为json
-        iFlySpeechRecognizer?.setParameter("json", forKey: IFlySpeechConstant.result_TYPE())
-        //保存录音文件，保存在sdk工作路径中，如未设置工作路径，则默认保存在library/cache下
-        iFlySpeechRecognizer?.setParameter("asr.pcm", forKey: IFlySpeechConstant.asr_AUDIO_PATH())
+        
         
         self.finishedCallback = finishedCallback
         iFlySpeechRecognizer?.startListening()
@@ -82,6 +77,12 @@ extension SpeechHelper:IFlySpeechRecognizerDelegate{
             //设置听写模式
             iFlySpeechRecognizer?.setParameter("iat", forKey: IFlySpeechConstant.ifly_DOMAIN())
             
+            //设置音频来源为麦克风
+            iFlySpeechRecognizer?.setParameter(IFLY_AUDIO_SOURCE_MIC, forKey: "audio_source")
+            //设置听写结果格式为json
+            iFlySpeechRecognizer?.setParameter("json", forKey: IFlySpeechConstant.result_TYPE())
+            //保存录音文件，保存在sdk工作路径中，如未设置工作路径，则默认保存在library/cache下
+            iFlySpeechRecognizer?.setParameter("asr.pcm", forKey: IFlySpeechConstant.asr_AUDIO_PATH())
         }
         
         iFlySpeechRecognizer?.delegate = self
@@ -154,7 +155,7 @@ extension SpeechHelper:IFlySpeechRecognizerDelegate{
         }
         
         
-        print("\(text)")
+//        print("\(text)")
         
     }
     
@@ -183,7 +184,7 @@ extension SpeechHelper:IFlySpeechRecognizerDelegate{
         currenString = "\(currenString ?? "")\(resultFromJson ?? "")"
         
         if isLast {
-            print("\(resultFromJson!)")
+//            print("\(resultFromJson!)")
             
         }
         
