@@ -13,4 +13,5 @@
 #import "iflyMSC/IFlyRecognizerViewDelegate.h"
 #import "iflyMSC/IFlyRecognizerView.h"
 
-
+#import "IATConfig.h"
+#import "ISRDataHelper.h"

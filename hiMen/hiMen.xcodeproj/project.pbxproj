@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		E6470EC91E7F6A8A00F14B26 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F2701E1E7D8CA700127FD7 /* libc++.tbd */; };
+		E6470ECB1E7F783A00F14B26 /* RecognizerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6470ECA1E7F783A00F14B26 /* RecognizerController.swift */; };
+		E6470ECF1E7F86E400F14B26 /* NUIRecognizerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6470ECE1E7F86E400F14B26 /* NUIRecognizerController.swift */; };
+		E6470ED31E7F88DE00F14B26 /* IATConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E6470ED21E7F88DE00F14B26 /* IATConfig.m */; };
+		E6470ED61E7FA98700F14B26 /* ISRDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6470ED51E7FA98700F14B26 /* ISRDataHelper.m */; };
 		E6F270181E7D74A200127FD7 /* libSunFlower.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6FE17D91E7BF5CB006705EE /* libSunFlower.a */; };
 		E6F270191E7D75A700127FD7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6FE17E31E7BF655006705EE /* SystemConfiguration.framework */; };
 		E6F2701B1E7D75C100127FD7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F2701A1E7D75C100127FD7 /* libz.tbd */; };
@@ -23,8 +27,6 @@
 		E6F8A8D31E7EB5B600FA15E6 /* TrackingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F8A8D21E7EB5B600FA15E6 /* TrackingHelper.swift */; };
 		E6F8A8D51E7EB82000FA15E6 /* SpeechHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F8A8D41E7EB82000FA15E6 /* SpeechHelper.swift */; };
 		E6FE17C31E7BF359006705EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FE17C21E7BF359006705EE /* AppDelegate.swift */; };
-		E6FE17C51E7BF359006705EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FE17C41E7BF359006705EE /* ViewController.swift */; };
-		E6FE17C81E7BF359006705EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6FE17C61E7BF359006705EE /* Main.storyboard */; };
 		E6FE17CA1E7BF359006705EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6FE17C91E7BF359006705EE /* Assets.xcassets */; };
 		E6FE17CD1E7BF359006705EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6FE17CB1E7BF359006705EE /* LaunchScreen.storyboard */; };
 		E6FE17DD1E7BF607006705EE /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6FE17DC1E7BF607006705EE /* CoreTelephony.framework */; };
@@ -32,6 +34,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E6470ECA1E7F783A00F14B26 /* RecognizerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognizerController.swift; sourceTree = "<group>"; };
+		E6470ECE1E7F86E400F14B26 /* NUIRecognizerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIRecognizerController.swift; sourceTree = "<group>"; };
+		E6470ED11E7F88DE00F14B26 /* IATConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IATConfig.h; sourceTree = "<group>"; };
+		E6470ED21E7F88DE00F14B26 /* IATConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IATConfig.m; sourceTree = "<group>"; };
+		E6470ED41E7FA98700F14B26 /* ISRDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISRDataHelper.h; sourceTree = "<group>"; };
+		E6470ED51E7FA98700F14B26 /* ISRDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISRDataHelper.m; sourceTree = "<group>"; };
 		E6F2701A1E7D75C100127FD7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		E6F2701C1E7D8C6800127FD7 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iflyMSC.framework; path = "../../iOS_voice_1154_58cbba9d (1)/lib/iflyMSC.framework"; sourceTree = "<group>"; };
 		E6F2701E1E7D8CA700127FD7 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -48,8 +56,6 @@
 		E6F8A8D41E7EB82000FA15E6 /* SpeechHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechHelper.swift; sourceTree = "<group>"; };
 		E6FE17BF1E7BF359006705EE /* hiMen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hiMen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6FE17C21E7BF359006705EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E6FE17C41E7BF359006705EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E6FE17C71E7BF359006705EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E6FE17C91E7BF359006705EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6FE17CC1E7BF359006705EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6FE17CE1E7BF359006705EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,9 +95,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E6470ED01E7F88C300F14B26 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				E6470ED11E7F88DE00F14B26 /* IATConfig.h */,
+				E6470ED21E7F88DE00F14B26 /* IATConfig.m */,
+				E6470ED41E7FA98700F14B26 /* ISRDataHelper.h */,
+				E6470ED51E7FA98700F14B26 /* ISRDataHelper.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		E6F8A8CD1E7EB50500FA15E6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E6470ED01E7F88C300F14B26 /* Other */,
 				E6F8A8CE1E7EB50500FA15E6 /* Controller */,
 				E6F8A8CF1E7EB50500FA15E6 /* Model */,
 				E6F8A8D01E7EB50500FA15E6 /* View */,
@@ -102,6 +120,8 @@
 		E6F8A8CE1E7EB50500FA15E6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E6470ECA1E7F783A00F14B26 /* RecognizerController.swift */,
+				E6470ECE1E7F86E400F14B26 /* NUIRecognizerController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -153,8 +173,6 @@
 				E6F8A8CD1E7EB50500FA15E6 /* Classes */,
 				E6FE17D71E7BF5CB006705EE /* lib */,
 				E6FE17C21E7BF359006705EE /* AppDelegate.swift */,
-				E6FE17C41E7BF359006705EE /* ViewController.swift */,
-				E6FE17C61E7BF359006705EE /* Main.storyboard */,
 				E6FE17C91E7BF359006705EE /* Assets.xcassets */,
 				E6FE17CB1E7BF359006705EE /* LaunchScreen.storyboard */,
 				E6FE17CE1E7BF359006705EE /* Info.plist */,
@@ -258,7 +276,6 @@
 			files = (
 				E6FE17CD1E7BF359006705EE /* LaunchScreen.storyboard in Resources */,
 				E6FE17CA1E7BF359006705EE /* Assets.xcassets in Resources */,
-				E6FE17C81E7BF359006705EE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,9 +286,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6FE17C51E7BF359006705EE /* ViewController.swift in Sources */,
+				E6470ED61E7FA98700F14B26 /* ISRDataHelper.m in Sources */,
+				E6470ED31E7F88DE00F14B26 /* IATConfig.m in Sources */,
 				E6F8A8D51E7EB82000FA15E6 /* SpeechHelper.swift in Sources */,
 				E6F8A8D31E7EB5B600FA15E6 /* TrackingHelper.swift in Sources */,
+				E6470ECB1E7F783A00F14B26 /* RecognizerController.swift in Sources */,
+				E6470ECF1E7F86E400F14B26 /* NUIRecognizerController.swift in Sources */,
 				E6FE17C31E7BF359006705EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,14 +299,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E6FE17C61E7BF359006705EE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E6FE17C71E7BF359006705EE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E6FE17CB1E7BF359006705EE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
