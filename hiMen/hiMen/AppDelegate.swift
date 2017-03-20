@@ -28,8 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
-//        //数据追踪
-//        TrackingHelper.trackSetting(Appid: "58cbba9d", CollectorStatus: true, DebugMode: true, CaptureUncaughtException: true, MonitorStatus: true, MonitorTimeInterval: 5, AutoLocation: true, Duid: "testDuid")
+        //数据追踪
+        TrackingHelper.trackSetting(Appid: "58cbba9d", CollectorStatus: true, DebugMode: true, CaptureUncaughtException: true, MonitorStatus: true, MonitorTimeInterval: 5, AutoLocation: true, Duid: "testDuid")
         
         
         return true
