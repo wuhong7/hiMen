@@ -8,6 +8,8 @@
 
 #import "IFlyFlowerCollector.h"
 
+#import "iflyMSC/IFlyMSC.h"
+
 #import "iflyMSC/IFlyRecognizerViewDelegate.h"
 #import "iflyMSC/IFlyRecognizerView.h"
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E6470EC91E7F6A8A00F14B26 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F2701E1E7D8CA700127FD7 /* libc++.tbd */; };
 		E6F270181E7D74A200127FD7 /* libSunFlower.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6FE17D91E7BF5CB006705EE /* libSunFlower.a */; };
 		E6F270191E7D75A700127FD7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6FE17E31E7BF655006705EE /* SystemConfiguration.framework */; };
 		E6F2701B1E7D75C100127FD7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F2701A1E7D75C100127FD7 /* libz.tbd */; };
@@ -67,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6470EC91E7F6A8A00F14B26 /* libc++.tbd in Frameworks */,
 				E6F270281E7D935E00127FD7 /* Contacts.framework in Frameworks */,
 				E6F270261E7D915800127FD7 /* iflyMSC.framework in Frameworks */,
 				E6F2701B1E7D75C100127FD7 /* libz.tbd in Frameworks */,

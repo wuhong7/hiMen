@@ -17,15 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
         
-        //用户统计
-
-        
-        for _ in 0...10{
-            let help = SpeechHelper.shared
-            print("\(help)")
-        }
+        //语音识别
+        SpeechHelper.Speech(APPID: "58cbba9d", LogFileLevel: .LVL_ALL, showLogcat: true)
         
         
+        
+        
+        
+        
+        
+        //数据追踪
         TrackingHelper.trackSetting(Appid: "58cbba9d", CollectorStatus: true, DebugMode: true, CaptureUncaughtException: true, MonitorStatus: true, MonitorTimeInterval: 5, AutoLocation: true, Duid: "testDuid")
         
         
