@@ -96,7 +96,7 @@ extension SpeechHelper:IFlySpeechRecognizerDelegate{
             //设置前端点
             iFlySpeechRecognizer?.setParameter(instance?.vadBos, forKey: IFlySpeechConstant.vad_BOS())
             //网络等待时间
-            iFlySpeechRecognizer?.setParameter("20000", forKey: IFlySpeechConstant.net_TIMEOUT())
+            iFlySpeechRecognizer?.setParameter("8000", forKey: IFlySpeechConstant.net_TIMEOUT())
             //设置采样率，推荐使用16K
             iFlySpeechRecognizer?.setParameter(instance?.sampleRate, forKey: IFlySpeechConstant.sample_RATE())
             
