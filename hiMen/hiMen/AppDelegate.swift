@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SpeechHelper.Speech(APPID: "58cbba9d", LogFileLevel: .LVL_ALL, showLogcat: false)
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = NUIRecognizerController()
+        window?.rootViewController = demoController()
         window?.makeKeyAndVisible()
         
         

@@ -19,8 +19,6 @@ class RecognizerController: UIViewController {
         
         setupUI()
         
-    
-
     }
     
     
