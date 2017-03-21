@@ -396,7 +396,7 @@
 					"$(PROJECT_DIR)/hiMen",
 					"$(PROJECT_DIR)/hiMen/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = whong7.com;
+				PRODUCT_BUNDLE_IDENTIFIER = whong7.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/hiMen/hiMen-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -418,7 +418,7 @@
 					"$(PROJECT_DIR)/hiMen",
 					"$(PROJECT_DIR)/hiMen/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = whong7.com;
+				PRODUCT_BUNDLE_IDENTIFIER = whong7.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/hiMen/hiMen-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

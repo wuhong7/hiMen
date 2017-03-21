@@ -63,7 +63,7 @@ class SpeechHelper: NSObject {
     
 }
 
-// MARK: - 语音识别
+// MARK: 语音识别
 extension SpeechHelper:IFlySpeechRecognizerDelegate{
     
     func initRecognizer(){
@@ -186,7 +186,7 @@ extension SpeechHelper:IFlySpeechRecognizerDelegate{
         
         if isLast {
 //            print("\(resultFromJson!)")
-            
+
         }
         
     }
@@ -260,7 +260,7 @@ class IATConfig: NSObject{
     
     fileprivate func defaultSetting(){
         speechTimeout = "30000"
-        vadEos = "3000"
+        vadEos = "1000"
         vadBos = "3000"
         dot = "1"
         sampleRate = "16000"
@@ -270,7 +270,7 @@ class IATConfig: NSObject{
 
 }
 
-
+// MARK: 方法调用
 extension IATConfig{
     
     fileprivate class func mandarin() -> String{

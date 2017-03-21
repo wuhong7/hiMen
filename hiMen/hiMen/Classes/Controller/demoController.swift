@@ -59,11 +59,11 @@ extension demoController{
     
     func beginRecognize(){
         
-        
+        print("开始")
         textView?.text = ""
         textView?.resignFirstResponder()
         
-       SpeechHelper.shared.beginRecognize { [weak self] (result, currentState) in
+        SpeechHelper.shared.beginRecognize { [weak self] (result, currentState) in
         
         if result != nil{
             self?.textView?.text = result
