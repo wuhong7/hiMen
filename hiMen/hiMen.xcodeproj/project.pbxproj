@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E6470EC91E7F6A8A00F14B26 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F2701E1E7D8CA700127FD7 /* libc++.tbd */; };
+		E64210C01E8388FC007EA933 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F270251E7D915800127FD7 /* iflyMSC.framework */; };
 		E6470EDA1E7FD42800F14B26 /* demoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6470ED91E7FD42800F14B26 /* demoController.swift */; };
 		E6F270181E7D74A200127FD7 /* libSunFlower.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6FE17D91E7BF5CB006705EE /* libSunFlower.a */; };
 		E6F270191E7D75A700127FD7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6FE17E31E7BF655006705EE /* SystemConfiguration.framework */; };
 		E6F2701B1E7D75C100127FD7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F2701A1E7D75C100127FD7 /* libz.tbd */; };
-		E6F270261E7D915800127FD7 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F270251E7D915800127FD7 /* iflyMSC.framework */; };
 		E6F270281E7D935E00127FD7 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F270271E7D935E00127FD7 /* Contacts.framework */; };
 		E6F2702A1E7D937B00127FD7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F270291E7D937B00127FD7 /* AVFoundation.framework */; };
 		E6F2702C1E7D938D00127FD7 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F2702B1E7D938D00127FD7 /* AddressBook.framework */; };
@@ -66,9 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6470EC91E7F6A8A00F14B26 /* libc++.tbd in Frameworks */,
+				E6F270181E7D74A200127FD7 /* libSunFlower.a in Frameworks */,
+				E64210C01E8388FC007EA933 /* iflyMSC.framework in Frameworks */,
 				E6F270281E7D935E00127FD7 /* Contacts.framework in Frameworks */,
-				E6F270261E7D915800127FD7 /* iflyMSC.framework in Frameworks */,
 				E6F2701B1E7D75C100127FD7 /* libz.tbd in Frameworks */,
 				E6FE17DF1E7BF615006705EE /* CoreLocation.framework in Frameworks */,
 				E6FE17DD1E7BF607006705EE /* CoreTelephony.framework in Frameworks */,
@@ -80,7 +79,6 @@
 				E6F270321E7D93CB00127FD7 /* UIKit.framework in Frameworks */,
 				E6F270341E7D93DB00127FD7 /* Foundation.framework in Frameworks */,
 				E6F270361E7D93ED00127FD7 /* CoreGraphics.framework in Frameworks */,
-				E6F270181E7D74A200127FD7 /* libSunFlower.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

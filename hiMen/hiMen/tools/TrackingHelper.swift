@@ -13,7 +13,8 @@ class TrackingHelper {
     class func trackSetting(
         Appid:String,
         CollectorStatus:Bool,
-        DebugMode:Bool,CaptureUncaughtException:Bool,
+        DebugMode:Bool,
+        CaptureUncaughtException:Bool,
         MonitorStatus:Bool,
         MonitorTimeInterval:Double,
         AutoLocation:Bool,

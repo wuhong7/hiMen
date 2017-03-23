@@ -20,16 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //语音识别
         SpeechHelper.Speech(APPID: "58cbba9d", LogFileLevel: .LVL_ALL, showLogcat: false)
         
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = demoController()
         window?.makeKeyAndVisible()
         
-        
-        
-        
-        
         //数据追踪
         TrackingHelper.trackSetting(Appid: "58cbba9d", CollectorStatus: true, DebugMode: true, CaptureUncaughtException: true, MonitorStatus: true, MonitorTimeInterval: 5, AutoLocation: true, Duid: "testDuid")
+       
+
         
         
         return true
